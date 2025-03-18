@@ -5,7 +5,7 @@ Welcome to my GitHub repository!
 This is a simple project hosted with GitHub Pages.  
 
 ## Visit My Website  
-[Click here](arhamibrar.github.io/) to view the site.  
+[Click here](https.arhamibrar.github.io/) to view the site.  
 
 ## How to Use  
 - Open `index.html` to see the website.  
