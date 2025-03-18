@@ -11,21 +11,19 @@
             width: 40%;
             margin: 15px auto;
         }
-
         .image-container {
             position: relative;
-            text-align: center;
+            display: inline-block;
         }
-
-        .overlay-text {
+        .image-text {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: white;
             font-size: 3rem;
             font-weight: bold;
-            mix-blend-mode: overlay;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
     </style>
 </head>
@@ -47,10 +45,10 @@
         <a href="contact.html" class="mx-3 text-dark text-decoration-none fw-bold">Contact</a>
     </nav>
 
-    <!-- First Image with Overlay Text -->
-    <div class="container text-center mt-5 position-relative">
-        <img src="your-first-image.png" class="img-fluid" alt="First Image">
-        <h2 class="overlay-text">STΛCKHΛCK</h2>
+    <!-- First Image (AVIF) -->
+    <div class="container text-center mt-5 image-container">
+        <img src="img.avif" class="img-fluid" alt="First Image">
+        <div class="image-text">STΛCKHΛCK</div>
     </div>
 
     <!-- Full-Width Pure Black Section -->
@@ -59,10 +57,10 @@
         <p class="fs-5 mt-2">Cloud • DevOps • Automation • Kubernetes</p>
     </div>
 
-    <!-- Second GIF with Overlay Text -->
-    <div class="container text-center mt-5 position-relative">
+    <!-- Second GIF -->
+    <div class="container text-center mt-5 image-container">
         <img src="your-second-gif.gif" class="img-fluid" alt="Second GIF">
-        <h2 class="overlay-text">info@stackhack</h2>
+        <div class="image-text">info@stackhack</div>
     </div>
 
     <!-- Footer (Now Below Everything) -->
@@ -72,4 +70,5 @@
 
 </body>
 </html>
+
 
