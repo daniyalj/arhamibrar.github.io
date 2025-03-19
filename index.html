@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,10 +11,22 @@
             width: 40%;
             margin: 15px auto;
         }
+
         .image-container {
             position: relative;
             display: inline-block;
+            width: 100vw;
+            height: 90vh;
+            overflow: hidden;
         }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
         .image-text {
             position: absolute;
             top: 50%;
@@ -31,7 +43,7 @@
 
     <!-- Full-Width White Section with Logo -->
     <div class="text-center py-2 w-100" style="background-color: white;">
-        <img src="images/logoo.png" alt="Logo" height="80"> <!-- Logo in the center -->
+        <img src="images/logomod.png" alt="Logo" height="80" style="background: transparent;"> 
     </div>
 
     <!-- Horizontal Line -->
@@ -45,9 +57,9 @@
         <a href="contact.html" class="mx-3 text-dark text-decoration-none fw-bold">Contact</a>
     </nav>
 
- <!-- First Image with Text Overlay -->
-<div class="image-container" style="width: 100vw; height: 90vh; overflow: hidden;">
-    <img src="images/nasaimgg.jpg" alt="NASA Image" style="width: 100%; height: 100%; object-fit: cover;">
+<!-- First Image with Text Overlay -->
+<div class="image-container" style="width: 100vw; height: 100vh; overflow: hidden; margin: 0; padding: 0; display: flex; align-items: center; justify-content: center;">
+    <img src="images/nasaimgg.jpg" alt="NASA Image" style="width: 100%; height: 100vh; object-fit: cover; display: block;">
     <div class="image-text">STΛCKHΛCK</div>
 </div>
 
@@ -57,19 +69,20 @@
         <p class="fs-5 mt-2">Cloud • DevOps • Automation • Kubernetes</p>
     </div>
 
-<!-- Second Image with Text Overlay -->
-<div class="container-fluid p-0 position-relative" style="width: 100vw; height: 70vh; overflow: hidden;">
-    <img src="images/nasaimggg.jpg" class="w-100 h-100 object-fit-cover" alt="Second Image">
-    <div class="image-text">
-        <div style="font-weight: bold; font-size: 3rem;">Get in Touch</div>
-        <div style="font-weight: 300; font-size: 1.5rem;">info@stackhack</div>
+    <!-- Second Image with Text Overlay -->
+    <div class="container-fluid p-0 position-relative" style="width: 100vw; height: 70vh; overflow: hidden;">
+        <img src="images/nasaimggg.jpg" class="w-100 h-100 object-fit-cover" alt="Second Image">
+        <div class="image-text">
+            <div style="font-weight: bold; font-size: 3rem;">Get in Touch</div>
+            <div style="font-weight: 300; font-size: 1.5rem;">info@stackhack</div>
+        </div>
     </div>
-</div>
 
-    <!-- Footer (Now Below Everything) -->
+    <!-- Footer -->
     <footer class="text-center py-3 mt-5">
         © 2022 by StackHack Inc.
     </footer>
 
 </body>
 </html>
+
