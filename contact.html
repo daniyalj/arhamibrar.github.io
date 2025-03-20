@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - StackHack</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <style>
         .custom-hr {
             border: 1.5px solid black;
@@ -18,6 +17,7 @@
             width: 100vw;
             height: 70vh;
             overflow: hidden;
+            background-color: black; /* Ensures no white streaks */
         }
 
         .image-container img {
@@ -60,38 +60,14 @@
             display: inline-block;
         }
 
-        /* Contact Info Section (Now Full Width & Connected) */
-        .contact-info {
-            background-color: black;
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-            width: 100%;
-            margin: 0; /* Ensures no gaps */
-        }
-
-        .contact-info h2 {
-            margin-bottom: 10px;
-        }
-
-        .contact-info p {
-            font-size: 1rem;
-        }
-
-        /* Waze Map Section */
+        /* Fixing Waze Map Blue and White Streak */
         .map-container {
             width: 100%;
             height: 40vh;
-            overflow: hidden;
             position: relative;
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
+            overflow: hidden;
+            background-color: black; /* Ensures no white or blue streak */
+            margin-top: -2px; /* This prevents any gaps */
         }
 
         .black-box {
@@ -99,14 +75,15 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 35px;
+            height: 30px;
             background-color: black;
+            z-index: 10; /* Ensures it fully covers the Waze blue bar */
         }
     </style>
 </head>
 <body class="bg-light">
 
-    <!-- Logo -->
+    <!-- Full-Width White Section with Logo -->
     <div class="logo-container w-100">
         <img src="images/logomod.png" alt="Logo"> 
     </div>
@@ -124,22 +101,21 @@
 
     <!-- Contact Image with Text Overlay -->
     <div class="image-container">
-        <img src="images/contactimg.jpg" alt="Get in Touch">
+        <img src="images/contactimg.jpg" alt="Get in Touch"> <!-- Replace with your image -->
         <div class="image-text">
-            Get in Contact
+            Get in Touch
             <span>info@stackhack.ca</span>
         </div>
     </div>
 
-    <!-- Full Width Black Section for Contact Info -->
-    <div class="contact-info">
-        <h2>Contact Us</h2>
-        <p>Feel free to reach out for any inquiries. We would love to hear from you!</p>
-    </div>
-
-    <!-- Waze Map Section (Now Connected to Black Section Above) -->
+    <!-- Waze Map Section -->
     <div class="map-container">
-        <iframe src="https://embed.waze.com/iframe?zoom=14&lat=43.66543816314432&lon=" allowfullscreen></iframe>
+        <iframe src="https://embed.waze.com/iframe?zoom=14&lat=43.66543816314432&lon=-79.46804911349376" 
+                width="100%" 
+                height="100%" 
+                style="position: absolute; top: 0; left: 0;">
+        </iframe>
+        <!-- Black Box to Hide the Blue Header -->
         <div class="black-box"></div>
     </div>
 
@@ -149,4 +125,4 @@
     </footer>
 
 </body>
-</html>
+</html>   
