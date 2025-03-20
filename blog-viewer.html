@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Viewer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+</head>
+<body>
+    <h1>Blog Post</h1>
+    <div id="blog-content">Loading...</div>
+
+    <script>
+        async function loadMarkdown() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const post = urlParams.get('post');
+
+            if (!post) {
+                document.getElementById("blog-content").innerHTML = "<p>No blog post selected.</p>";
+                return;
+            }
+
+            try {
+                const response = await fetch('blogs/' + post);
+                if (!response.ok) throw new Error("Blog not found");
+
+                const text = await response.text();
+                const converter = new showdown.Converter();
+                document.getElementById("blog-content").innerHTML = converter.makeHtml(text);
+            } catch (error) {
+                document.getElementById("blog-content").innerHTML = "<p>Blog post not found.</p>";
+            }
+        }
+
+        loadMarkdown();
+    </script>
+</body>
+</html>
