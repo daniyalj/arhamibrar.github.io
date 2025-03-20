@@ -56,23 +56,19 @@
 
         /* Styling for "Our Expertise" section */
         .expertise-section {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
+            text-align: center; /* Keep it centered */
             margin-top: 50px;
         }
 
         .expertise-title {
             font-size: 3rem;
             font-weight: bold;
-            text-align: left;
-            flex: 1;
         }
 
         .expertise-content {
             font-size: 1.5rem;
-            flex: 2;
-            padding-left: 50px; /* Creates space between the two */
+            max-width: 600px; /* Ensures consistency on all screen sizes */
+            margin: 20px auto; /* Centers the content */
         }
 
         /* Styling for "Let's Work Together" section */
@@ -110,6 +106,20 @@
             background-color: #005582;
         }
 
+        /* Responsive Fix */
+        @media (max-width: 768px) {
+            .expertise-title {
+                font-size: 2.5rem;
+            }
+            .expertise-content {
+                font-size: 1.3rem;
+                padding: 0 15px; /* Adds space on mobile */
+            }
+            .work-together {
+                font-size: 2rem;
+            }
+        }
+
     </style>
 </head>
 <body class="bg-light">
@@ -130,25 +140,26 @@
         <a href="contact.html" class="mx-3 text-dark text-decoration-none fw-bold">Contact</a>
     </nav>
 
-    <!-- Image with "About Me" Text -->
+    <!-- Image with "About Us" Text -->
     <div class="image-container">
         <img src="images/starsimg.jpg" alt="About Me"> <!-- Replace with your image -->
-        <div class="image-text">About Me</div>
+        <div class="image-text">About Us</div>
     </div>
 
     <!-- Our Expertise Section -->
-    <div class="expertise-title">Our<br>Expertise</div>
+    <div class="container expertise-section">
+        <div class="expertise-title">Our<br>Expertise</div>
+        <div class="expertise-content">
+            <strong>• Cloud</strong><br>
+            Adopt cloud faster<br><br>
 
-<div class="expertise-content mt-3">
-    <strong>• Cloud</strong><br>
-    Adopt cloud faster<br><br>
+            <strong>• Automation and DevOps</strong><br>
+            Automate deployments faster<br><br>
 
-    <strong>• Automation and DevOps</strong><br>
-    Automate deployments faster<br><br>
-
-    <strong>• Kubernetes and Containers</strong><br>
-    Make your applications portable
-</div>
+            <strong>• Kubernetes and Containers</strong><br>
+            Make your applications portable
+        </div>
+    </div>
 
     <!-- Let's Work Together Section -->
     <div class="work-together">
@@ -156,12 +167,12 @@
     </div>
 
     <!-- Contact Info -->
-<div class="contact-info">
-    2967 Dundas St W #679 Toronto <br>
-    Ontario Canada <br>
-    Email: info@stackhack.ca<br>
-    Tel: +1 647-948-9719 <!-- Replace with actual phone number -->
-</div>
+    <div class="contact-info">
+        2967 Dundas St W #679 Toronto <br>
+        Ontario Canada <br>
+        Email: info@stackhack.ca<br>
+        Tel: +1 647-948-9719
+    </div>
 
     <!-- LinkedIn Button -->
     <div class="linkedin-button">
@@ -175,5 +186,6 @@
 
 </body>
 </html>
+
 
 
