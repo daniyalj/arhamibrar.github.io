@@ -36,22 +36,80 @@
         }
 
         /* Styling for the logo container */
-.logo-container {
-    background-color: transparent !important;
-    text-align: center;
-    padding: 10px 0;
-}
+        .logo-container {
+            background-color: transparent !important;
+            text-align: center;
+            padding: 10px 0;
+        }
 
-.logo-container img {
-    height: 70px; /* Adjust this value to make it smaller */
-    width: auto; /* Maintain aspect ratio */
-}
+        .logo-container img {
+            height: 70px; /* Adjust this value to make it smaller */
+            width: auto; /* Maintain aspect ratio */
+        }
+
         /* Horizontal line styling */
         .custom-hr {
             border: 1.5px solid black;
             width: 40%;
             margin: 15px auto;
         }
+
+        /* Styling for "Our Expertise" section */
+        .expertise-section {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+
+        .expertise-title {
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: left;
+            flex: 1;
+        }
+
+        .expertise-content {
+            font-size: 1.5rem;
+            flex: 2;
+            padding-left: 50px; /* Creates space between the two */
+        }
+
+        /* Styling for "Let's Work Together" section */
+        .work-together {
+            margin-top: 100px; /* Adds space below "Our Expertise" */
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.3rem;
+        }
+
+        /* LinkedIn Button */
+        .linkedin-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .linkedin-button a {
+            background-color: #0077b5;
+            color: white;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .linkedin-button a:hover {
+            background-color: #005582;
+        }
+
     </style>
 </head>
 <body class="bg-light">
@@ -78,13 +136,37 @@
         <div class="image-text">About Me</div>
     </div>
 
-    <!-- About Section -->
-    <div class="container text-center mt-5">
-        <h1 class="fw-bold">About StackHack</h1>
-        <p class="fs-5 mt-3">
-            Welcome to StackHack! We are passionate about Cloud, DevOps, Automation, and Kubernetes.
-            Our mission is to build cutting-edge solutions that empower businesses worldwide.
-        </p>
+    <!-- Our Expertise Section -->
+    <div class="container expertise-section">
+        <div class="expertise-title">Our<br>Expertise</div>
+        <div class="expertise-content">
+            StackHack has been helping transform and modernize enterprises by being a leader in cloud computing, application modernization, and DevOps solutions.  
+            <br><br>
+            <strong>Cloud</strong><br>
+            Adopt cloud faster<br><br>
+            <strong>Automation and DevOps</strong><br>
+            Automate deployments faster <br><br>
+            <strong>Kubernetes and Containers</strong><br>
+            Make your applications portable
+        </div>
+    </div>
+
+    <!-- Let's Work Together Section -->
+    <div class="work-together">
+        Let's<br>Work<br>Together
+    </div>
+
+    <!-- Contact Info -->
+<div class="contact-info">
+    2967 Dundas St W #679 Toronto <br>
+    Ontario Canada <br>
+    Email: info@stackhack.ca<br>
+    Tel: +1 647-948-9719 <!-- Replace with actual phone number -->
+</div>
+
+    <!-- LinkedIn Button -->
+    <div class="linkedin-button">
+        <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
     </div>
 
     <!-- Footer -->
@@ -94,4 +176,5 @@
 
 </body>
 </html>
+
 
