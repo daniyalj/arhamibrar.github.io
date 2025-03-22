@@ -5,10 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Viewer</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .custom-hr {
+            border: 1.5px solid black;
+            width: 40%;
+            margin: 15px auto;
+        }
+        .logo-container {
+            text-align: center;
+            padding: 10px 0;
+        }
+        .logo-container img {
+            height: 80px;
+        }
+        .nav-menu {
+            text-align: center;
+            padding: 10px;
+        }
+        .nav-menu a {
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
 </head>
-<body>
-    <h1>Blog Post</h1>
-    <div id="blog-content">Loading...</div>
+<body class="bg-light">
+    
+    <!-- Logo -->
+    <div class="logo-container">
+        <img src="images/logomod.png" alt="Logo">
+    </div>
+
+    <!-- Horizontal Line -->
+    <hr class="custom-hr">
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Blog Content -->
+    <div class="container mt-4">
+        <h1>Blog Post</h1>
+        <div id="blog-content">Loading...</div>
+    </div>
 
     <script>
         async function loadMarkdown() {
@@ -34,5 +79,7 @@
 
         loadMarkdown();
     </script>
+
 </body>
 </html>
+
