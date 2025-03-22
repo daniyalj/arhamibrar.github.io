@@ -11,22 +11,59 @@
             width: 40%;
             margin: 15px auto;
         }
+
         .logo-container {
             text-align: center;
             padding: 10px 0;
         }
+
         .logo-container img {
             height: 80px;
         }
+
+        /* EXACT NAVIGATION MATCH */
         .nav-menu {
             text-align: center;
-            padding: 10px;
+            padding: 15px 0;
         }
+
         .nav-menu a {
-            margin: 0 15px;
+            margin: 0 15px; /* Matches Home Page */
             text-decoration: none;
             font-weight: bold;
+            font-size: 1rem;
             color: black;
+        }
+
+        /* Blog Post Box */
+        .blog-box {
+            display: flex;
+            align-items: center;
+            border: 4px solid black;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 100px;
+            width: 100%;
+            min-height: 350px;
+        }
+
+        .blog-box img {
+            width: 450px;
+            height: 300px;
+            object-fit: cover;
+            margin-right: 50px;
+            border-radius: 10px;
+        }
+
+        .blog-title {
+            font-size: 3rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+
+        .blog-title:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -40,24 +77,39 @@
     <!-- Horizontal Line -->
     <hr class="custom-hr">
 
-    <!-- Navigation Menu -->
+    <!-- Navigation Menu (Now EXACTLY Matches Home Page) -->
     <nav class="nav-menu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" class="mx-3 text-dark text-decoration-none fw-bold">Home</a>
+        <a href="blog.html" class="mx-3 text-dark text-decoration-none fw-bold">Blog</a>
+        <a href="about.html" class="mx-3 text-dark text-decoration-none fw-bold">About</a>
+        <a href="contact.html" class="mx-3 text-dark text-decoration-none fw-bold">Contact</a>
     </nav>
 
     <!-- Blog List -->
-    <div class="container mt-4">
-        <h1>Blog</h1>
-        <ul>
-            <li><a href="blog-viewer.html?post=blog-1.md">Blog Post 1</a></li>
-            <li><a href="blog-viewer.html?post=blog-2.md">Blog Post 2</a></li>
-            <li><a href="blog-viewer.html?post=blog-3.md">Blog Post 3</a></li>
-        </ul>
+    <div class="container mt-5">
+        <h1 class="mb-5">Blog</h1>
+
+        <div class="blog-box">
+            <img src="images/blog-1.jpg" alt="Blog 1"> 
+            <a href="blog-viewer.html?post=blog-1.md" class="blog-title">Blog Post 1</a>
+        </div>
+
+        <div class="blog-box">
+            <img src="images/blog-2.jpg" alt="Blog 2"> 
+            <a href="blog-viewer.html?post=blog-2.md" class="blog-title">Blog Post 2</a>
+        </div>
+
+        <div class="blog-box">
+            <img src="images/blog-3.jpg" alt="Blog 3"> 
+            <a href="blog-viewer.html?post=blog-3.md" class="blog-title">Blog Post 3</a>
+        </div>
+
     </div>
 
 </body>
 </html>
+
+
+
+
 
